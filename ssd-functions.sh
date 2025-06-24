@@ -30,8 +30,8 @@ trigger_data_collection() {
 
   local PAYLOAD=$(cat <<EOF
 {
-  "artifactName": "${NAME}",
-  "artifactTag": "${TAG}",
+  "artifactName": "${DOCKER_IMAGE_NAME}",
+  "artifactTag": "${DOCKER_TAG}",
   "organizationName": "opsmx"
 }
 EOF
