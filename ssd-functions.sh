@@ -1,6 +1,7 @@
 #!/bin/bash
 
 send_ssd_webhook() {
+  echo "SSD Functions script triggered"
   echo "Sending build event to SSD..."
   curl --location "$SSD_URL/webhook/v1/ssd" \
     --header 'Content-Type: application/json' \
@@ -100,4 +101,6 @@ EOF
     echo "Access denied."
     exit 1
   fi
+
+  echo "SSD Functions script execution is completed"
 }
